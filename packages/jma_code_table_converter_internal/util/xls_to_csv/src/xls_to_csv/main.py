@@ -5,6 +5,12 @@ import pyexcel as pe
 
 
 def convert_xls_to_xlsx(input_file, output_file):
+    """
+
+    :param input_file: 
+    :param output_file: 
+
+    """
     pe.save_book_as(file_name=input_file, dest_file_name=input_file + ".xlsx")
     # ついでに CSV にも変換しておく
     wb = openpyxl.load_workbook(input_file + ".xlsx")
