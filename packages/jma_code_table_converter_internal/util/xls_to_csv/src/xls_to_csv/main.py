@@ -25,9 +25,15 @@ if __name__ == "__main__":
     # コマンドライン引数を受け取る
     parser = argparse.ArgumentParser()
     # -i
-    parser.add_argument("-i", "--input_file", help="input file path", required=True)
+    parser.add_argument("-i",
+                        "--input_file",
+                        help="input file path",
+                        required=True)
     # -o
-    parser.add_argument("-o", "--output_file", help="output file path", required=True)
+    parser.add_argument("-o",
+                        "--output_file",
+                        help="output file path",
+                        required=True)
     args = parser.parse_args()
 
     # xlsファイルをxlsxファイルに変換する
