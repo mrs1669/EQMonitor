@@ -1,6 +1,7 @@
-import pyexcel as pe
-import openpyxl
 import argparse
+
+import openpyxl
+import pyexcel as pe
 
 
 def convert_xls_to_xlsx(input_file, output_file):
