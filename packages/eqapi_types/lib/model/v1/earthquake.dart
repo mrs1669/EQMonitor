@@ -5,8 +5,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'earthquake.freezed.dart';
 part 'earthquake.g.dart';
 
-
-
 @freezed
 class EarthquakeV1 with _$EarthquakeV1 {
   const factory EarthquakeV1({
@@ -39,10 +37,9 @@ class EarthquakeV1 with _$EarthquakeV1 {
       _$EarthquakeV1FromJson(json);
 }
 
-
 /// `/v1/earthquake/region` の `$.[*].earthquake` で利用
 @freezed
- class EarthquakeV1Base with _$EarthquakeV1Base {
+class EarthquakeV1Base with _$EarthquakeV1Base {
   const factory EarthquakeV1Base({
     DateTime? arrivalTime,
     int? depth,

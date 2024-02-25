@@ -4,7 +4,6 @@ import 'package:lat_lng/lat_lng.dart';
 part 'earthquake.freezed.dart';
 part 'earthquake.g.dart';
 
-
 @freezed
 class Earthquake with _$Earthquake {
   @JsonSerializable(fieldRename: FieldRename.none)
@@ -18,8 +17,6 @@ class Earthquake with _$Earthquake {
   factory Earthquake.fromJson(Map<String, dynamic> json) =>
       _$EarthquakeFromJson(json);
 }
-
-
 
 @freezed
 class EarthquakeHypocenter with _$EarthquakeHypocenter {

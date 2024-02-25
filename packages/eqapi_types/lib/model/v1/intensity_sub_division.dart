@@ -17,5 +17,3 @@ class IntensitySubDivision with _$IntensitySubDivision {
   factory IntensitySubDivision.fromJson(Map<String, dynamic> json) =>
       _$IntensitySubDivisionFromJson(json);
 }
-
-

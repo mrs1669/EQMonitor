@@ -17,9 +17,30 @@ import 'dart:typed_data' as $typed_data;
 const JmaCodeTable$json = {
   '1': 'JmaCodeTable',
   '2': [
-    {'1': 'areaEpicenter', '3': 41, '4': 1, '5': 11, '6': '.AreaEpicenter', '10': 'areaEpicenter'},
-    {'1': 'areaEpicenterAbbreviation', '3': 42, '4': 1, '5': 11, '6': '.AreaEpicenterAbbreviation', '10': 'areaEpicenterAbbreviation'},
-    {'1': 'areaEpicenterDetail', '3': 43, '4': 1, '5': 11, '6': '.AreaEpicenterDetail', '10': 'areaEpicenterDetail'},
+    {
+      '1': 'areaEpicenter',
+      '3': 41,
+      '4': 1,
+      '5': 11,
+      '6': '.AreaEpicenter',
+      '10': 'areaEpicenter'
+    },
+    {
+      '1': 'areaEpicenterAbbreviation',
+      '3': 42,
+      '4': 1,
+      '5': 11,
+      '6': '.AreaEpicenterAbbreviation',
+      '10': 'areaEpicenterAbbreviation'
+    },
+    {
+      '1': 'areaEpicenterDetail',
+      '3': 43,
+      '4': 1,
+      '5': 11,
+      '6': '.AreaEpicenterDetail',
+      '10': 'areaEpicenterDetail'
+    },
   ],
 };
 
@@ -35,7 +56,14 @@ final $typed_data.Uint8List jmaCodeTableDescriptor = $convert.base64Decode(
 const AreaEpicenter$json = {
   '1': 'AreaEpicenter',
   '2': [
-    {'1': 'items', '3': 1, '4': 3, '5': 11, '6': '.AreaEpicenter.AreaEpicenterItem', '10': 'items'},
+    {
+      '1': 'items',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.AreaEpicenter.AreaEpicenterItem',
+      '10': 'items'
+    },
   ],
   '3': [AreaEpicenter_AreaEpicenterItem$json],
 };
@@ -59,7 +87,14 @@ final $typed_data.Uint8List areaEpicenterDescriptor = $convert.base64Decode(
 const AreaEpicenterAbbreviation$json = {
   '1': 'AreaEpicenterAbbreviation',
   '2': [
-    {'1': 'items', '3': 1, '4': 3, '5': 11, '6': '.AreaEpicenterAbbreviation.AreaEpicenterAbbreviationItem', '10': 'items'},
+    {
+      '1': 'items',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.AreaEpicenterAbbreviation.AreaEpicenterAbbreviationItem',
+      '10': 'items'
+    },
   ],
   '3': [AreaEpicenterAbbreviation_AreaEpicenterAbbreviationItem$json],
 };
@@ -84,7 +119,14 @@ final $typed_data.Uint8List areaEpicenterAbbreviationDescriptor = $convert.base6
 const AreaEpicenterDetail$json = {
   '1': 'AreaEpicenterDetail',
   '2': [
-    {'1': 'items', '3': 1, '4': 3, '5': 11, '6': '.AreaEpicenterDetail.AreaEpicenterDetailItem', '10': 'items'},
+    {
+      '1': 'items',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.AreaEpicenterDetail.AreaEpicenterDetailItem',
+      '10': 'items'
+    },
   ],
   '3': [AreaEpicenterDetail_AreaEpicenterDetailItem$json],
 };
@@ -103,4 +145,3 @@ final $typed_data.Uint8List areaEpicenterDetailDescriptor = $convert.base64Decod
     'ChNBcmVhRXBpY2VudGVyRGV0YWlsEkIKBWl0ZW1zGAEgAygLMiwuQXJlYUVwaWNlbnRlckRldG'
     'FpbC5BcmVhRXBpY2VudGVyRGV0YWlsSXRlbVIFaXRlbXMaQQoXQXJlYUVwaWNlbnRlckRldGFp'
     'bEl0ZW0SEgoEY29kZRgBIAEoCVIEY29kZRISCgRuYW1lGAIgASgJUgRuYW1l');
-
