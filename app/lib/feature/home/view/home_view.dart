@@ -178,7 +178,7 @@ class _HomeBodyWidget extends HookConsumerWidget {
                 }
                 await Future<void>.delayed(const Duration(milliseconds: 1000));
                 return true;
-              // ignore: avoid_catches_without_on_clauses
+                // ignore: avoid_catches_without_on_clauses
               } catch (e) {
                 log('画像のキャッシュ 失敗: $e');
                 await Future<void>.delayed(const Duration(milliseconds: 1000));
@@ -333,8 +333,7 @@ class _Sheet extends StatelessWidget {
           if (kDebugMode)
             ListTile(
               title: const Text('新 地震履歴'),
-              onTap: () =>
-                  const EarthquakeHistoryRoute().push<void>(context),
+              onTap: () => const EarthquakeHistoryRoute().push<void>(context),
             ),
         ],
       ),

@@ -22,8 +22,7 @@ class InformationV3 with _$InformationV3 {
     required String title,
     required String body,
     @JsonKey(unknownEnumValue: Author.unknown) required Author author,
-    @JsonKey(name: "createdAt")
-    required DateTime createdAt,
+    @JsonKey(name: "createdAt") required DateTime createdAt,
     @JsonKey(unknownEnumValue: Level.info) required Level level,
     required int? eventId,
   }) = _InformationV3;

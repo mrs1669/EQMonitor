@@ -14,7 +14,6 @@ class InformationV1 with _$InformationV1 {
     required Map<String, dynamic> body,
     @JsonKey(
       name: 'created_at',
-      
     )
     required DateTime createdAt,
     required int id,
