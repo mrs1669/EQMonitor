@@ -32,9 +32,6 @@ class TelegramWs extends _$TelegramWs {
         talker.handle(error, stackTrace);
       }
     });
-    if (kDebugMode) {
-      requestSample();
-    }
     return stream.stream;
   }
 

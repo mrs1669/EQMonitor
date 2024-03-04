@@ -12,6 +12,7 @@ import 'package:eqmonitor/core/hook/use_sheet_controller.dart';
 import 'package:eqmonitor/core/provider/capture/intensity_icon_render.dart';
 import 'package:eqmonitor/core/provider/config/notification/fcm_topic_manager.dart';
 import 'package:eqmonitor/core/provider/config/permission/permission_status_provider.dart';
+import 'package:eqmonitor/core/provider/live_activity.dart';
 import 'package:eqmonitor/core/provider/ntp/ntp_provider.dart';
 import 'package:eqmonitor/core/router/router.dart';
 import 'package:eqmonitor/feature/home/component/eew/eew_widget.dart';
@@ -178,7 +179,7 @@ class _HomeBodyWidget extends HookConsumerWidget {
                 }
                 await Future<void>.delayed(const Duration(milliseconds: 1000));
                 return true;
-              // ignore: avoid_catches_without_on_clauses
+                // ignore: avoid_catches_without_on_clauses
               } catch (e) {
                 log('画像のキャッシュ 失敗: $e');
                 await Future<void>.delayed(const Duration(milliseconds: 1000));
@@ -289,12 +290,54 @@ class _Fabs extends ConsumerWidget {
           elevation: 4,
           child: const Icon(Icons.home),
         ),
-        if (kDebugMode)
+        if (kDebugMode) ...[
           FloatingActionButton.small(
             onPressed: ref.read(telegramWsProvider.notifier).requestSample,
             heroTag: 'sample',
             child: const Icon(Icons.warning),
           ),
+          FilledButton.tonalIcon(
+            label: const Text('Live Activities'),
+            onPressed: () async {
+              final liveActivities = ref.read(liveActivitiesProvider);
+              final result = await liveActivities.createActivity(
+                {
+                  'matchStartDate': DateTime.now().toIso8601String(),
+                  'matchEndDate': DateTime.now()
+                      .add(const Duration(minutes: 30))
+                      .toIso8601String(),
+                  'matchTitle': 'LiveActivities Test',
+                  'teamAName': 'TeamA',
+                  'teamBName': 'TeamB',
+                  'teamAScore': 0,
+                  'teamBScore': 0,
+                },
+              );
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('LiveActivities: $result'),
+                  ),
+                );
+              }
+            },
+            icon: const Icon(Icons.warning),
+          ),
+          FilledButton(
+            child: const Text('Check LA'),
+            onPressed: () async {
+              final liveActivities = ref.read(liveActivitiesProvider);
+              final result = await liveActivities.getAllActivitiesIds();
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('LiveActivities: $result'),
+                  ),
+                );
+              }
+            },
+          ),
+        ],
       ],
     );
   }

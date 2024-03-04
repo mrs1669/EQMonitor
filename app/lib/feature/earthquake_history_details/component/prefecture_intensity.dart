@@ -90,6 +90,9 @@ Future<Map<JmaIntensity, List<_MergedRegionIntensity>>> _calculator(
             return MapEntry(intensity, mergedPrefecture);
           });
         } else {
+          return {};
+          // FIXME
+          /*
           return prefectures.where((e) => e.intensity != null).groupListsBy((e) => e.intensity).map(
                 (intensity, prefectures) => MapEntry(
                   intensity,
@@ -104,7 +107,7 @@ Future<Map<JmaIntensity, List<_MergedRegionIntensity>>> _calculator(
                       )
                       .toList(),
                 ),
-              );
+              );*/
         }
       },
       arg,

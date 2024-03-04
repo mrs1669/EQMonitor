@@ -66,6 +66,7 @@ dependencies:
       url: https://github.com/YumNumm/EQMonitor.git
       path: packages/lat_lng
   latlong2: ^0.9.0
+  live_activities: ^1.9.1+1
   maplibre_gl:
     git:
       url: https://github.com/YumNumm/flutter-maplibre-gl.git

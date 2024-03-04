@@ -25,9 +25,11 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:talker_flutter/talker_flutter.dart';
+import 'live_activities.dart' as la;
 
 late final ProviderContainer container;
 Future<void> main() async {
+  return la.main();
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
