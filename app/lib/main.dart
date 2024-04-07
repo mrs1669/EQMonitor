@@ -35,9 +35,8 @@ Future<void> main() async {
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.transparent,
-      systemNavigationBarContrastEnforced: true
-    ),
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarContrastEnforced: true),
   );
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
