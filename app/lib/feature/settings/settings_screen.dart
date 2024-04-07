@@ -114,7 +114,6 @@ class SettingsScreen extends HookConsumerWidget {
             title: const Text('このアプリケーションについて'),
             subtitle: const Text('利用規約やプライバシーポリシーを確認できます'),
             leading: const Icon(Icons.description),
-
             onTap: () => const AboutThisAppRoute().push<void>(context),
           ),
           ListTile(
