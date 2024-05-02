@@ -1,5 +1,8 @@
 # Changelog
 
+## [v2.4.3](https://github.com/YumNumm/EQMonitor/compare/v2.4.2...v2.4.3) - 2024-05-02
+- update flutter 3.19.6 by @YumNumm in https://github.com/YumNumm/EQMonitor/pull/674
+
 ## [v2.4.2](https://github.com/YumNumm/EQMonitor/compare/v2.4.1...v2.4.2) - 2024-04-20
 - Android v2.4.1 において、起動しない問題の緊急対応 by @YumNumm in https://github.com/YumNumm/EQMonitor/pull/662
 
